@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ekush - Link in Bio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kalpurush&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Kalpurush', 'SolaimanLipi', 'Mukti', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            min-height: 100vh;
+            background: linear-gradient(135deg, 
+                hsl(351, 100%, 86%) 0%,     /* Light pink */
+                hsl(300, 47%, 75%) 25%,     /* Light purple */
+                hsl(120, 93%, 79%) 50%,     /* Light green */
+                hsl(197, 71%, 73%) 75%,     /* Light blue */
+                hsl(351, 100%, 86%) 100%    /* Back to light pink */
+            );
+            background-size: 300% 300%;
+            animation: gradientShift 8s ease infinite;
+        }
+
+        @keyframes gradientShift {
+            0% { 
+                background-position: 0% 50%; 
+            }
+            50% { 
+                background-position: 100% 50%; 
+            }
+            100% { 
+                background-position: 0% 50%; 
+            }
+        }
+
+        .container {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 32px 16px;
+        }
+
+        .profile-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 32px;
+        }
+
+        .profile-image {
+            width: 96px;
+            height: 96px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-bottom: 16px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+            border: 4px solid white;
+        }
+
+        .profile-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .profile-name {
+            font-size: 28px;
+            font-weight: 600;
+            color: #374151;
+            text-align: center;
+        }
+
+        .links-container {
+            width: 100%;
+            max-width: 448px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .link-button {
+            display: block;
+            width: 100%;
+            background: white;
+            border-radius: 12px;
+            padding: 18px 24px;
+            text-align: center;
+            color: #374151;
+            font-weight: 500;
+            text-decoration: none;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.2s ease;
+            border: none;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        .link-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .whatsapp-button {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .whatsapp-logo {
+            position: absolute;
+            left: 16px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 24px;
+            height: 24px;
+        }
+
+        /* Mobile responsiveness */
+        @media (min-width: 768px) {
+            .profile-image {
+                width: 128px;
+                height: 128px;
+            }
+            
+            .profile-name {
+                font-size: 36px;
+            }
+            
+            .link-button {
+                font-size: 20px;
+                padding: 20px 24px;
+            }
+        }
+
+        /* Ensure proper mobile scaling */
+        @media (max-width: 480px) {
+            .container {
+                padding: 16px 12px;
+            }
+            
+            .profile-image {
+                width: 80px;
+                height: 80px;
+            }
+            
+            .profile-name {
+                font-size: 24px;
+            }
+            
+            .link-button {
+                padding: 16px 20px;
+                font-size: 17px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Profile Section -->
+        <div class="profile-section">
+            <!-- CHANGE THIS: Replace src with your profile image URL -->
+            <div class="profile-image">
+                <img src="https://ugc.production.linktr.ee/0cc8ed21-87ff-4ab5-9ab1-0ad3992a8fcc_logo-ekush-bangla-01.png?io=true&size=avatar-v3_0" alt="Ekush Logo">
+            </div>
+            
+            <!-- CHANGE THIS: Replace "Ekush" with your name -->
+            <h1 class="profile-name">Ekush</h1>
+        </div>
+
+        <!-- Links Container -->
+        <div class="links-container">
+            
+            <!-- CHANGE THESE: Regular link buttons - modify text and URLs -->
+            <a href="http://samakal.com/bangladesh/article/299089" target="_blank" rel="noopener noreferrer" class="link-button">
+                দৈনিক সমকালে প্রকাশিত একুশের কার্যক্রম
+            </a>
+
+            <a href="https://ekushcareer.com/" target="_blank" rel="noopener noreferrer" class="link-button">
+                একুশের ওয়েবসাইট
+            </a>
+
+            <a href="http://facebook.com/21bidesi" target="_blank" rel="noopener noreferrer" class="link-button">
+                একুশের ফেসবুক পেজ
+            </a>
+
+            <!-- CHANGE THIS: WhatsApp button with logo on left -->
+            <a href="https://wa.me/01716020209" target="_blank" rel="noopener noreferrer" class="link-button whatsapp-button">
+                <!-- CHANGE THIS: Replace src with your WhatsApp button logo URL -->
+                <img src="https://ugc.production.linktr.ee/ab6d2613-43fd-40bc-b8d8-f2a6553111f4_y8-PTBaP90a.png?io=true&size=thumbnail-stack-v1_0" alt="WhatsApp Logo" class="whatsapp-logo">
+                হোয়াটসাপ নাম্বার
+            </a>
+
+            <!-- ADD MORE BUTTONS: Copy the structure above and add here -->
+            
+        </div>
+    </div>
+</body>
+</html>
+
+<!-- 
+CUSTOMIZATION GUIDE:
+====================
+
+1. PROFILE IMAGE:
+   - Find: <img src="https://ugc.production..." in the profile-image div
+   - Replace the src URL with your image
+
+2. PROFILE NAME:
+   - Find: <h1 class="profile-name">Ekush</h1>
+   - Replace "Ekush" with your name
+
+3. REGULAR LINK BUTTONS:
+   - Find the <a> tags with class="link-button" (not whatsapp-button)
+   - Change href="..." to your URL
+   - Change the text between <a> and </a>
+
+4. WHATSAPP BUTTON:
+   - Find: href="https://wa.me/01716020209"
+   - Replace with your WhatsApp number (format: https://wa.me/YOURNUMBER)
+   - Find the WhatsApp logo img src and replace with your logo URL
+   - Change "হোয়াটসাপ নাম্বার" to your preferred text
+
+5. ADD MORE BUTTONS:
+   - Copy any existing button structure
+   - Paste it before the closing </div> of links-container
+   - Update the href and text
+
+6. COLORS:
+   - Background gradient colors are in the body CSS style
+   - Button colors are in .link-button CSS style
+   - Text colors are in the color properties
+
+The WhatsApp button automatically centers the text while keeping the logo on the left!
+-->
