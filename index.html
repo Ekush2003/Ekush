@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ekush qr code</title>
+    <title>Ekush - Link in Bio</title>
     <link href="https://fonts.googleapis.com/css2?family=Kalpurush&display=swap" rel="stylesheet">
     <style>
         * {
@@ -102,25 +102,30 @@
             cursor: pointer;
         }
 
+        /* Buttons with logos need extra left padding */
+        .logo-button, .whatsapp-button {
+            padding-left: 60px;
+        }
+
         .link-button:hover {
             transform: translateY(-2px);
             box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
         }
 
-        .whatsapp-button {
+        .whatsapp-button, .logo-button {
             position: relative;
             display: flex;
             align-items: center;
             justify-content: center;
         }
 
-        .whatsapp-logo {
+        .whatsapp-logo, .button-logo {
             position: absolute;
-            left: 16px;
+            left: 22px;
             top: 50%;
             transform: translateY(-50%);
-            width: 24px;
-            height: 24px;
+            width: 32px;
+            height: 32px;
         }
 
         /* Mobile responsiveness */
@@ -137,6 +142,10 @@
             .link-button {
                 font-size: 20px;
                 padding: 20px 24px;
+            }
+            
+            .logo-button, .whatsapp-button {
+                padding-left: 70px;
             }
         }
 
@@ -159,6 +168,10 @@
                 padding: 16px 20px;
                 font-size: 17px;
             }
+            
+            .logo-button, .whatsapp-button {
+                padding-left: 55px;
+            }
         }
     </style>
 </head>
@@ -178,20 +191,28 @@
         <!-- Links Container -->
         <div class="links-container">
             
-            <!-- Updated link buttons with new content -->
-            <a href="https://sites.google.com/view/weekend-independent-feature-on/home" target="_blank" rel="noopener noreferrer" class="link-button">
+            <!-- Updated link buttons with logos on left -->
+            <a href="https://sites.google.com/view/weekend-independent-feature-on/home" target="_blank" rel="noopener noreferrer" class="link-button logo-button">
+                <!-- REPLACE THIS: Weekly Independent logo -->
+                <img src="https://ugc.production.linktr.ee/ab6d2613-43fd-40bc-b8d8-f2a6553111f4_y8-PTBaP90a.png?io=true&size=thumbnail-stack-v1_0" alt="Weekly Independent Logo" class="button-logo">
                 Weekly Independent ম্যাগাজিনে প্রকাশিত একুশের ফিচার এর লিংক
             </a>
 
-            <a href="https://samakal.com/bangladesh/article/299089" target="_blank" rel="noopener noreferrer" class="link-button">
+            <a href="https://samakal.com/bangladesh/article/299089" target="_blank" rel="noopener noreferrer" class="link-button logo-button">
+                <!-- REPLACE THIS: Samakal logo -->
+                <img src="https://ugc.production.linktr.ee/ab6d2613-43fd-40bc-b8d8-f2a6553111f4_y8-PTBaP90a.png?io=true&size=thumbnail-stack-v1_0" alt="Samakal Logo" class="button-logo">
                 দৈনিক সমকালে প্রকাশিত একুশের অর্জন এর লিংক
             </a>
 
-            <a href="https://ekushcareer.com/" target="_blank" rel="noopener noreferrer" class="link-button">
+            <a href="https://ekushcareer.com/" target="_blank" rel="noopener noreferrer" class="link-button logo-button">
+                <!-- REPLACE THIS: Ekush website logo -->
+                <img src="https://ugc.production.linktr.ee/ab6d2613-43fd-40bc-b8d8-f2a6553111f4_y8-PTBaP90a.png?io=true&size=thumbnail-stack-v1_0" alt="Ekush Website Logo" class="button-logo">
                 একুশের ওয়েবসাইটের লিংক
             </a>
 
-            <a href="https://www.facebook.com/21bidesi" target="_blank" rel="noopener noreferrer" class="link-button">
+            <a href="https://www.facebook.com/21bidesi" target="_blank" rel="noopener noreferrer" class="link-button logo-button">
+                <!-- REPLACE THIS: Facebook logo -->
+                <img src="https://ugc.production.linktr.ee/ab6d2613-43fd-40bc-b8d8-f2a6553111f4_y8-PTBaP90a.png?io=true&size=thumbnail-stack-v1_0" alt="Facebook Logo" class="button-logo">
                 ফেসবুকের লিংক
             </a>
 
